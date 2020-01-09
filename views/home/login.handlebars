@@ -1,0 +1,46 @@
+<link rel="stylesheet" href="/css/{{default 'styleName'}}/home/login.css">
+<div class="container">
+    <div class="row">
+        <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
+            <div class="card card-signin my-5">
+                <div class="card-body">
+                    <h5 class="card-title text-center">{{texts "loginPage"}}</h5>
+                    {{#if error}}
+                    <div class="alert alert-danger" role="alert">
+                        {{error}}
+                    </div>
+                    {{/if}}
+
+                    <form class="form-signin" method="POST" action="/login">
+                        <div class="form-label-group">
+
+
+
+                            <input type="email" id="txtEmail" name="txtEmail" class="form-control"
+                                placeholder="{{texts "email"}}" {{#ifEquals (default "isSecured") "true"}}required
+                                {{/ifEquals}}autofocus>
+                            <label for="inputEmail"> </label>
+                        </div>
+
+                        <div class="form-label-group">
+                            <input type="password" id="txtPassword" name="txtPassword" class="form-control"
+                                placeholder="{{texts "password"}}"
+                                {{#ifEquals (default "isSecured") "true"}}required{{/ifEquals}}>
+                            <label for="inputPassword"> </label>
+                        </div>
+
+                        <div class="custom-control custom-checkbox mb-3">
+                            <input type="checkbox" class="custom-control-input" id="customCheck1">
+                            <label class="custom-control-label" for="customCheck1">{{texts "rememberPassword"}}</label>
+                        </div>
+                        <input type="hidden" name="_csrf" value="{{csrf}}" />
+                        <button id="btnLogin" class="btn btn-lg btn-block text-uppercase"
+                            type="submit">{{texts "login"}}</button>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="/js/home/login.js"></script>

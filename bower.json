@@ -1,0 +1,17 @@
+{
+  "name": "webrihland",
+  "description": "RIHLand website",
+  "main": "index.js",
+  "authors": [
+    "Haitham Alhaji"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/HaithamAlhaji/WebHToDo",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

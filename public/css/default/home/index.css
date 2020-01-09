@@ -1,0 +1,59 @@
+.jumbotron {
+  color: white;
+  text-align: center;
+  background: -webkit-gradient(linear, right top, left top, from(#078c74), to(#f2884b));
+  background: linear-gradient(270deg, #078c74, #f2884b);
+  background-size: 400% 400%;
+  -webkit-animation: AnimationName 30s ease infinite;
+  animation: AnimationName 30s ease infinite;
+}
+
+@-webkit-keyframes AnimationName {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes AnimationName {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+#logo {
+  background-image: url("/img/logo.svg");
+  background-clip: content-box;
+  background-origin: content-box;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 150px;
+  height: 150px;
+  text-align: center;
+  margin: 10px auto;
+}
+
+.topicBox > .topicContainer {
+  background-color: white;
+  margin: 5px;
+}
+
+footer {
+  background-color: #f2884b;
+}
+
+footer .card-columns .card {
+  background-color: transparent;
+}

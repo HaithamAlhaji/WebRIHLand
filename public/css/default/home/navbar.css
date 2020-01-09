@@ -1,0 +1,45 @@
+.navbar {
+  background: -webkit-gradient(linear, right top, left top, from(#078c74), to(#f2884b));
+  background: linear-gradient(270deg, #078c74, #f2884b);
+  background-size: 400% 400%;
+  -webkit-animation: AnimationName 30s ease infinite;
+  animation: AnimationName 30s ease infinite;
+}
+
+@-webkit-keyframes AnimationName {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes AnimationName {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.navbar a {
+  color: white;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+.navbar a:hover {
+  color: #f2884b;
+}
+
+.navbar a.dropdown-item {
+  color: #f2884b;
+}

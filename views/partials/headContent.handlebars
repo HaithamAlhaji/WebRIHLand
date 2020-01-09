@@ -1,0 +1,60 @@
+<meta charset="{{default "charset"}}" />
+
+<link rel="stylesheet" href="/css/{{default "styleName"}}/main.css" />
+{{!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> --}}
+<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+<link rel="icon" href="/favicon.ico" type="image/x-icon">
+<link rel="stylesheet" href="/assets/fontawesome/css/all.css">
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+{{#if description}}
+<meta name="description" content="{{description}}" />
+{{else}}
+<meta name="description" content="{{default "app_description"}}" />
+{{/if}}
+
+{{#if keywords}}
+<meta name="keywords" content="{{keywords}}" />
+{{else}}
+<meta name="keywords" content="{{default "app_keywords"}}" />
+{{/if}}
+
+{{#if author}}
+<meta name="author" content="{{author}}" />
+{{else}}
+<meta name="author" content="{{default "app_author"}}" />
+{{/if}}
+
+{{#if image}}
+<meta property="og:image" content="/img/{{image}}" />
+{{else}}
+<meta property="og:image" content="/img/og_image.png" />
+{{/if}}
+
+{{#if title}}
+<title>{{default "websiteName"}} | {{title}}</title>
+<meta property="og:title" content="{{default "websiteName"}} | {{title}}" />
+{{else}}
+<title>{{default "websiteName"}}</title>
+<meta property="og:title" content="{{default "websiteName"}}" />
+{{/if}}
+
+<meta name="copyright" content="{{default "websiteName"}} © 2019" />
+<meta name="robots" content="follow" />
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta property="og:url" content="" />
+{{#ifEquals (texts "direction") "rtl"}}
+<link rel="stylesheet" href="https://cdn.rtlcss.com/bootstrap/v4.2.1/css/bootstrap.min.css"
+    integrity="sha384-vus3nQHTD+5mpDiZ4rkEPlnkcyTP+49BhJ4wJeJunw06ZAp+wzzeBPUXr42fi8If" crossorigin="anonymous">
+{{/ifEquals}}
+
+{{#ifEquals (texts "direction") "ltr"}}
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+{{/ifEquals}}
+
+<link href="https://gitcdn.github.io/bootstrap-toggle/2.2.2/css/bootstrap-toggle.min.css" rel="stylesheet">

@@ -1,0 +1,58 @@
+<link rel="stylesheet" href="/css/{{default 'styleName'}}/home/register.css">
+<div class="container">
+    <div class="row">
+        <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
+            <div class="card card-register my-5">
+                <div class="card-body">
+                    <h5 class="card-title text-center">{{texts "RegisterPage"}}</h5>
+                    <form class="form-register" method="POST" action="/register">
+                        {{#if error}}
+                        <div class="alert alert-danger" role="alert">
+                            <strong>{{error}}</strong>
+                        </div>
+                        {{/if}}
+                        <div class="row">
+                            <div class="col-6">
+                                <div class="form-label-group">
+                                    <input type="text" id="txtFirstName" name="txtFirstName" class="form-control"
+                                        placeholder="First Name"
+                                        {{#ifEquals (default "isSecured") "true"}}required{{/ifEquals}}>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="form-label-group">
+                                    <input type="text" id="txtLastName" name="txtLastName" class="form-control"
+                                        placeholder="Last Name"
+                                        {{#ifEquals (default "isSecured") "true"}}required{{/ifEquals}}>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-label-group">
+                            <input type="email" id="txtEmail" name="txtEmail" class="form-control"
+                                placeholder="Email address"
+                                {{#ifEquals (default "isSecured") "true"}}required{{/ifEquals}}>
+
+                        </div>
+
+
+                        <div class="form-label-group">
+                            <input type="password" id="txtPassword" name="txtPassword" class="form-control"
+                                placeholder="Password" {{#ifEquals (default "isSecured") "true"}}required{{/ifEquals}}>
+                        </div>
+                        <div class="form-label-group">
+                            <input type="password" id="txtPasswordConfirmation" name="txtPasswordConfirmation"
+                                class="form-control" placeholder="Password Confirmation"
+                                {{#ifEquals (default "isSecured") "true"}}required{{/ifEquals}}>
+                        </div>
+                        <input type="hidden" name="_csrf" value="{{csrf}}" />
+                        <button id="btnRegister" class="btn btn-lg btn-block text-uppercase"
+                            type="submit">{{texts "register"}}</button>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="/js/home/register.js"></script>

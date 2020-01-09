@@ -1,0 +1,82 @@
+<link rel="stylesheet" href="/css/{{default 'styleName'}}/home/mytodo.css">
+{{>home/navbar}}
+<div class="mytodo-title text-center p-4">
+    <i class="fas fa-list-ul "></i>
+
+    {{texts "myToDo"}}
+</div>
+
+<div class="d-flex justify-content-around">
+    <!-- Search form -->
+    <form class="form-inline md-form form-sm active-cyan-2 mt-2" method="POST" action="/tasks/search"
+        style=" width:50%;">
+        <input id="txtSearch" name="txtSearch" class="form-control form-control-sm mr-3 w-75" type="text"
+            placeholder="{{texts "search"}}" aria-label="Search" {{#if search}} value="{{search}}" {{/if}}>
+        <button id="btnSearch" type="submit" class="btn btn-secondary">
+            <i class="fas fa-search" aria-hidden="true"></i>
+        </button>
+
+    </form>
+</div>
+
+<div class="card-columns m-4">
+    <div class="card">
+        <form class="form-signin" method="POST" action="/addTask">
+            <div class="card-body">
+                {{#if error_add_task}}
+                <div class="alert alert-danger" role="alert">
+                    {{error_add_task}}
+                </div>
+                {{/if}}
+                {{#if taskAdded}}
+                <div class="alert alert-success" role="alert">
+                    {{taskAdded}}
+                </div>
+                {{/if}}
+
+                <div class="form-label-group">
+                    <textarea id="txtTask" name="txtTask" class="form-control" rows="3"
+                        placeholder="{{texts "whatsup"}}"
+                        {{#ifEquals (default "isSecured") "true"}}required{{/ifEquals}}></textarea>
+                </div>
+
+                <p class="card-text"></p>
+
+            </div>
+            <div class="card-footer text-muted">
+                <div class="row">
+                    {{!-- <div class="col-5">
+                        <div id="btnAddAttachment" class="btn btn-block" onclick="btnUpload_click();">
+                            <i class="fas fa-paperclip"></i>
+                            Add Attach.
+                        </div>
+                        <input type="file" id="btnUpload" name="btnUpload" accept="image/*,video/*,audio/*">
+                    </div> --}}
+                    <div class="col-12">
+                        <button type="submit" id="btnAddToDo" class="btn btn-block">
+                            <i class="fa fa-plus-circle" aria-hidden="true"></i>
+                            Post
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    {{#each list}}
+    <div class="card">
+        <div class="card-body">
+            <p class="card-text">{{content}}</p>
+            <blockquote class="blockquote mb-0">
+                <footer class="blockquote-footer">{{creation}}
+                </footer>
+            </blockquote>
+        </div>
+        {{!-- <div class="card-footer text-muted">
+            <div class="btn btn-secondary"></div>
+        </div> --}}
+    </div>
+    {{/each}}
+
+</div>
+<script src="/js/home/mytodo.js"></script>

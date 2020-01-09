@@ -1,0 +1,121 @@
+<link rel="stylesheet" href="/css/{{default "styleName"}}/home/navbar.css">
+{{!-- <nav class="nav justify-content-center sticky-top">
+    <a class="nav-link " href="#">
+        <i class="far fa-home    "></i>
+        Home
+    </a>
+    <a class="nav-link" href="#">
+        <i class="fa fa-link" aria-hidden="true"></i>
+        Link
+    </a>
+    <a class="nav-link" href="#">
+        <i class="fa fa-link" aria-hidden="true"></i>
+        Link
+    </a>
+    <a class="nav-link" href="#">
+        <i class="fa fa-link" aria-hidden="true"></i>
+        Link
+    </a>
+    <a class="nav-link" href="#">
+        <i class="fa fa-link" aria-hidden="true"></i>
+        Link
+    </a>
+    <a class="nav-link" href="#">
+        <i class="fa fa-link" aria-hidden="true"></i>
+        Link
+    </a>
+</nav> --}}
+<nav class="navbar navbar-expand-lg sticky-top">
+    <a class="navbar-brand" href="/">
+        <i class="fas fa-list-alt fa-2x"></i>
+    </a>
+    <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId"
+        aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="fas fa-bars" style="color: white;"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="collapsibleNavId">
+        <ul class="navbar-nav m{{texts "float"}}-auto mt-2 mt-lg-0">
+            <li class="nav-item">
+                <a class="nav-link" href="/">
+                    <i class="fa fa-home" aria-hidden="true"></i>
+                    {{texts "home"}}
+                </a>
+            </li>
+            {{#ifEquals isLoggedIn "true"}}
+            <li class="nav-item">
+                <a class="nav-link" href="/mytodo">
+                    <i class="fas fa-list-ul"></i>
+                    {{texts "myToDo"}}
+                </a>
+            </li>
+            {{/ifEquals}}
+            {{#ifEquals isLoggedIn "false"}}
+            <li class="nav-item">
+                <a class="nav-link" href="/login">
+                    <i class="fa fa-sign-in" aria-hidden="true"></i>
+                    {{texts "login"}}
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/register">
+                    <i class="fa fa-sign-in" aria-hidden="true"></i>
+                    {{texts "register"}}
+                </a>
+            </li>
+            {{/ifEquals}}
+
+
+            {{#ifEquals isAdmin "true"}}
+            <li class="nav-item">
+                <a class="nav-link" href="/admin">
+                    <i class="fa fa-cog" aria-hidden="true"></i>
+                    {{texts "admin"}}
+                </a>
+            </li>
+            {{/ifEquals}}
+
+            {{#ifEquals isLoggedIn "true"}}
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-toggle="dropdown" aria-haspopup="true"
+                    aria-expanded="false">
+                    <i class="fa fa-user" aria-hidden="true"></i>
+                    {{firstName}}
+                </a>
+                <div class="dropdown-menu" aria-labelledby="dropdownId">
+                    <a class="dropdown-item" href="/profile">
+                        <i class="fas fa-address-card"></i>
+                        {{texts "profile"}}
+                    </a>
+                    <div class="dropdown-divider"></div>
+                    <div></div>
+                    <a class="dropdown-item" href="/logout">
+                        <i class="fa fa-sign-out" aria-hidden="true"></i>
+                        {{texts "logout"}}
+                    </a>
+                </div>
+            </li>
+            {{/ifEquals}}
+
+            {{!-- <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="dropdownLanguages" data-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false">
+                    <i class="fas fa-globe-europe"></i>
+                    {{texts "languages"}}
+                </a>
+                <div class="dropdown-menu" aria-labelledby="dropdownLanguages">
+                    <a class="dropdown-item" href="/?lang=en">
+                        <i class="fas fa-square"></i>
+                        English
+                    </a>
+                    <div class="dropdown-divider"></div>
+                    <div></div>
+                    <a class="dropdown-item" href="/?lang=ar">
+                        <i class="fas fa-square"></i>
+                        العربية
+                    </a>
+                </div>
+            </li> --}}
+        </ul>
+
+    </div>
+</nav>

@@ -1,0 +1,20 @@
+@import "../variables";
+.mytodo-title {
+  font-size: 30px;
+}
+#btnAddAttachment {
+  background-color: $color2;
+  color: white;
+  cursor: pointer;
+}
+#btnAddToDo {
+  background-color: $color3;
+  color: white;
+  cursor: pointer;
+}
+#btnSearch {
+  display: inline;
+}
+#btnUpload {
+  display: none;
+}

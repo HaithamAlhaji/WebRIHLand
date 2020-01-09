@@ -1,0 +1,23 @@
+.mytodo-title {
+  font-size: 30px;
+}
+
+#btnAddAttachment {
+  background-color: #06735f;
+  color: white;
+  cursor: pointer;
+}
+
+#btnAddToDo {
+  background-color: #f2884b;
+  color: white;
+  cursor: pointer;
+}
+
+#btnSearch {
+  display: inline;
+}
+
+#btnUpload {
+  display: none;
+}

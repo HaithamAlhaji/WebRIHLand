@@ -1,0 +1,7 @@
+{
+  "user": {
+    "userType": "1"
+  },
+  "method": "GET",
+  "path": ["mytodo"]
+}

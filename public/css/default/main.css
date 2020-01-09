@@ -1,0 +1,46 @@
+@import url("https://fonts.googleapis.com/css?family=Cairo&display=swap");
+* {
+  margin: 0px;
+  padding: 0px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Cairo", sans-serif;
+  background-color: #f1f1f1 !important;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.7;
+  color: #403135;
+}
+
+html[lang="ar"] body {
+  font-family: "Cairo", sans-serif;
+  direction: rtl;
+}
+
+html[lang="en"] body {
+  font-family: "Cairo", sans-serif;
+  direction: ltr;
+}
+
+.text-color1 {
+  color: #078c74;
+}
+
+.text-color2 {
+  color: #06735f;
+}
+
+.text-color3 {
+  color: #f2884b;
+}
+
+.text-color4 {
+  color: #d96248;
+}
+
+.text-color5 {
+  color: #a64444;
+}
